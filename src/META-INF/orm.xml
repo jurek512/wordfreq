@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm__2_1.xsd">
+	<entity class="struktura.Ksiaska">
+		<attributes>
+			<id name="id">
+				<column name="ID" />
+				<generated-value strategy="TABLE" />
+			</id>
+			<basic name="autor">
+				<column name= "AUTOR"/>
+			</basic>
+			<basic name="titel">
+				<column name="TITEL" />
+			</basic>
+		</attributes>
+	</entity>
+	<entity class="struktura.MaloZnaneSlowa">
+		<attributes>
+			<id name="id">
+				<column name="ID" />
+				<generated-value strategy="TABLE" />
+			</id>
+			<one-to-one name="maloZnaneSlowo">
+			<join-column name = "MALOZNANESLOWO_ID" referenced-column-name= "ID"/>
+			</one-to-one>
+		</attributes>
+	</entity>
+	<entity class="struktura.NiewazneSlowa">
+		<attributes>
+			<id name="id">
+				<column name="ID" />
+				<generated-value strategy="TABLE" />
+			</id>
+			<one-to-one name="niewazneSlowo">
+			<join-column name = "NIEWAZNESLOWO_ID" referenced-column-name= "ID"/>
+			</one-to-one>
+		</attributes>
+	</entity>
+	<entity class="struktura.Slowo">
+		<attributes>
+			<id name="id">
+				<column name="ID" />
+				<generated-value strategy="TABLE" />
+			</id>
+			<basic name="slowo">
+				<column name="SLOWO" />
+			</basic>
+		</attributes>
+	</entity>
+	<entity class="struktura.SlowoWKsiazce">
+		<attributes>
+			<id name="id">
+				<column name="ID" />
+				<generated-value strategy="TABLE" />
+			</id>
+			<one-to-one name="kid">
+			<join-column name = "KID_ID" referenced-column-name= "ID"/>
+			</one-to-one>
+			<one-to-one name="slowo">
+			<join-column name = "SLOWO_ID" referenced-column-name= "ID"/>
+			</one-to-one>
+		</attributes>
+	</entity>
+	<entity class="struktura.ZnaneSlowa">
+		<attributes>
+			<id name="id">
+				<column name="ID" />
+				<generated-value strategy="TABLE" />
+			</id>
+			<one-to-one name="znaneSlowo">
+			<join-column name = "ZNANESLOWO_ID" referenced-column-name= "ID"/>
+			</one-to-one>
+		</attributes>
+	</entity>
+</entity-mappings>

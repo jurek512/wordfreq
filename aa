@@ -1,0 +1,6 @@
+select * from words.slwowks as a1
+left join words.znaneslowa a2 on a1.slowo_id = a2.znaneslowo_id
+left join words.niewaznesl a3 on a1.slowo_id = a3.niewazneslowo_id
+join words.slowo a4 on a1.slowo_id = a4.id
+where (znaneslowo_id is null) and (niewazneslowo_id is null)
+order by a1.ilerazywksiazce desc;

@@ -1,6 +1,6 @@
 package de.words;
 
-//Demonstratio of simple Two-list program
+//Demonstration of simple Two-list program
 //using awt controls
 
 import java.awt.BorderLayout;

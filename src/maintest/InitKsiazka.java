@@ -194,6 +194,8 @@ public class InitKsiazka {
 	}
 	
 	/**
+	 * Test git
+	 * 
 	 * @param args
 	 * 
 	 * Aufruf pfad text1 text2 ... textn

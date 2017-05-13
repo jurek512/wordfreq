@@ -194,6 +194,7 @@ public class InitKsiazka {
 	}
 	
 	/**
+	 * 
 	 * @param args
 	 * 
 	 * Aufruf pfad text1 text2 ... textn

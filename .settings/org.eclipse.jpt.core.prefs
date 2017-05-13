@@ -1,4 +1,4 @@
-#Sun Sep 26 20:30:29 CEST 2010
 eclipse.preferences.version=1
+entitygen.DEFAULT_PACKAGE=model
 org.eclipse.jpt.core.discoverAnnotatedClasses=false
-org.eclipse.jpt.core.platform=generic
+org.eclipse.jpt.core.platform=eclipselink1_2
